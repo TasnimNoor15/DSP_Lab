@@ -1,48 +1,32 @@
-###Experiment No: 04
-###Experiment Date:15-05-2023
-###Experiment Name: Finding the time delay between two signals from their auto correlation.
+# Lab reports [Roll: 1810015]
 
-###Theory:
-<p>The Z-transform (ZT) is a mathematical tool which is used to convert the difference equations in time domain into the algebraic equations in z-domain.
-The Z-transform is a very useful tool in the analysis of a linear shift invariant (LSI) system.
+## Course name: Digital Signal Processing Sessional
+## Course code:  ECE - 4124
 
-```
-Z[x(n)]=X(z)=∑n=x(n)z^(−n)
-```
-
-<p>The inverse Z-transform is defined as the process of finding the time domain signal x(n) from its Z-transform X(z). The inverse Z-transform is denoted as −
-
-```
-x(n)=Z(^−1)[X(z)]
-```
-<p>The ROC of the Z-transform is a ring or disc in the z-plane centred at the origin. The ROC of the Z-transform cannot contain any poles. The ROC of Z-transform of an LTI stable system contains the unit circle. The ROC of 
-<br>
-<br>
-Required Software:   Matlab
-<br>
-Required Language:  Matlab
-<br>
 <br>
 
-Neccessary Code:
+## Submitted to: 
+### **Hafsa Binte Kibria**
+### Lecturer
+### Department of Electrical and Computer Engineering
+### Rajshahi University of Engineering and Technology
 
-```Matlab
-clc;
-clear all;
-x=input('array: ');
-b=0;
-y=sym('z');
-n=length(x);
-for i=1:n
-   b=b+x(i)*y^(1-i); 
-    
-end
-z=[];
-p=[0]
-zplane(z,p)
+<br>
 
-grid
-```
+## Submitted by:
+
+### **Mst. Mazeda Noor Tasnim**
+### Roll: 1810015
+### Department of Electrical and Computer Engineering
+### Rajshahi University of Engineering and Technology
 
 
+<br>
+
+## Catalog:
+
+| Lab No. | Title | Link |
+| :---: | :---: | :---: |
+| 04 | Finding the time delay between two signals from their auto correlation. | [Lab 04](https://github.com/TasnimNoor15/DSP_Lab/blob/main/lab%2004.pdf)
+| 05 | Implementation of circular convolution, sum and subtract of two signals and draw two particular figures in MATLAB. | [Lab 05]
 
