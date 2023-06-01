@@ -50,6 +50,12 @@ zplane(z,p)
 grid
 ```
 
+## Output:
+![Output](src/causal.png)
+<br>
+![Output](src/causal2.png)
+  <br>
+   
 ```matlab
 % Anti-Causal System
 
@@ -70,6 +76,12 @@ zplane(z,p)
 grid
 ```
 
+## Output:
+![Output](src/anticausal.png)
+   <br>
+![Output](src/anticausal2.png)
+  <br>
+   
 ```matlab
 % Non-Causal System
 
@@ -91,7 +103,15 @@ zplane(z,p)
 
 grid
 ```
+## Output:
 
+![Output](src/noncausal.png)
+ <br>
+   
+![Output](src/noncausal2.png)
+ <br>
+
+   
 ```matlab
 % inverse Z-transform
 
@@ -117,6 +137,12 @@ text(real(z)+0.1,imag(z),"Zero")
 text(real(p)+0.1,imag(p),"Pole")
 ```
 
+##  Output
+   
+   ![Output](src/inverse.png)
+   <br>
+   ![Output](src/inverse2.png)
+   <br>
 
 ## Discussion:
 
