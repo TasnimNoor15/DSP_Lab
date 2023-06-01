@@ -8,18 +8,18 @@
 
 ##  Theory:
 <p>The Z-transform (ZT) is a mathematical tool which is used to convert the difference equations in time domain into the algebraic equations in z-domain.
-The Z-transform is a very useful tool in the analysis of a linear shift invariant (LSI) system.[1]
+The Z-transform is a very useful tool in the analysis of a linear shift invariant (LSI) system. [1]
 
 ```
 Z[x(n)]=X(z)=∑n=x(n)z^(−n)
 ```
 
-<p>The inverse Z-transform is defined as the process of finding the time domain signal x(n) from its Z-transform X(z). [2]The inverse Z-transform is denoted as −
+<p>The inverse Z-transform is defined as the process of finding the time domain signal x(n) from its Z-transform X(z) [2]. The inverse Z-transform is denoted as −
 
 ```
 x(n)=Z(^−1)[X(z)]
 ```
-<p>The ROC of the Z-transform is a ring or disc in the z-plane centred at the origin. The ROC of the Z-transform cannot contain any poles. The ROC of Z-transform of an LTI stable system contains the unit circle.[3]
+<p>The ROC of the Z-transform is a ring or disc in the z-plane centred at the origin. The ROC of the Z-transform cannot contain any poles. The ROC of Z-transform of an LTI stable system contains the unit circle. [3]
 <br>
 <br>
    Required Software:  <b> Matlab</b>
