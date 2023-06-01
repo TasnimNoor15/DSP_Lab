@@ -4,7 +4,7 @@
 
 ## Experiment Name :
 
-## Implementation of convolution using built in function and without built in function in MATLAB.
+## Experimental study about Z transform,Inverse Z transform and their ROC on Matalab.
 
 ###Theory:
 <p>The Z-transform (ZT) is a mathematical tool which is used to convert the difference equations in time domain into the algebraic equations in z-domain.
