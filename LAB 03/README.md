@@ -56,6 +56,8 @@ stem(y); title('Output-y')
 ## Output:
 
 ![Output](src/auto.png)
+<br>
+**Fig 3.1** : Figure of Auto Correlation 
 
 <br>
 <b> Cross correlation</b>
@@ -86,7 +88,7 @@ stem(y); title('Output-y')
 ## Output:
 
 ![Output](src/cross.png)
-
+**Fig 3.1** : Figure of Cross correlation
 <br>
 
 
