@@ -82,7 +82,7 @@ title(' y- output ');
 
 ![](src/circular.jpg)
 
-**Fig.** : Convolution of two signals using conv function
+**Fig 2.1** : Convolution of two signals
 
 <b> For plotting two signals and showing their summation and subtraction: </b> 
 <br>
@@ -111,7 +111,7 @@ title('Subtraction');
 
 ![](src/summation.png)
 
-**Fig.:** Convolution of two signals without using conv function
+**Fig 2.2:** Summation and subtraction of two signals
 
 Drawing the figure of given signals using array and plot:
 
@@ -146,8 +146,7 @@ patch(coor1(:,1),coor1(:,2),'w');
 
 ![](src/plots.png)
 
-**Fig.:** Convolution of two signals without using conv function
-
+**Fig 2.3:** Plots on matlab figure
 ## Discussion:
 
 <p style="text-align: justify">
