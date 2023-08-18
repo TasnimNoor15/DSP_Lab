@@ -28,7 +28,7 @@
 | :---: | :---: | :---: |
 | 01 | Finding the time delay between two signals from their auto correlation. | [Lab 01](https://github.com/TasnimNoor15/DSP_Lab/tree/main/Lab%2002)
 | 02 | Finding the time delay between two signals from their auto correlation. | [Lab 02](https://github.com/TasnimNoor15/DSP_Lab/tree/main/Lab%2002)
-| 03 | Finding the time delay between two signals from their auto correlation. | [Lab 03](https://github.com/TasnimNoor15/DSP_Lab/blob/main/LAB%2003/lab%2003))
+| 03 | Finding the time delay between two signals from their auto correlation. | [Lab 03](https://github.com/TasnimNoor15/DSP_Lab/tree/main/LAB%2003)
 | 04 | Finding the time delay between two signals from their auto correlation. | [Lab 04](https://github.com/TasnimNoor15/DSP_Lab/tree/main/Lab%2004)
 | 05 | Experimental study about Z transform,Inverse Z transform and their ROC on Matalab. | [Lab 05](https://github.com/TasnimNoor15/DSP_Lab/blob/main/Lab%2005/Readme.md)
 
