@@ -42,66 +42,77 @@ Step5: Increment the index n, shift the sequence x (n-m) to right by one sample 
   
 ```matlab
 
-clc; clear all;
-x=input('Enter the input signal'); h=fliplr(x);
-z=[];
-for i=1:length(x) g=h.*x(i);
-z=[z;g];
-end
-[r c]=size(z); k=r+c;
-t=2; y=[];
-cd=0; while(t<=k)
-for i=1:r
-for j=1:c
-if(i+j==t) cd=cd+z(i,j); end
-end
-end t=t+1;
-y=[y cd];
- 
-cd=0; end disp(y);
-subplot(2,1,1) stem(xcorr(x)); title('Auto correlation') subplot(2,1,2);
-stem(y); title('Output-y')
-
-```
-
-## Output:
-
-![Output](src/auto.png)
-<br>
-**Fig 3.1** : Figure of Auto Correlation 
-
-<br>
-<b> Cross correlation</b>
-  <br>
-  
-```matlab
 clc;
+
 clear all;
-x=input('Enter the first input signal'); x1=input('Enter the second input signal'); h=fliplr(x1);
-z=[];
-for i=1:length(x) g=h.*x(i);
-z=[z;g];
+x=[1,2];
+h=[1,2,4];
+
+z=conv(x,h);
+subplot(2,2,1); stem(z);
+xlabel('n values');
+
+ylabel('Amplitude');
+
+title('Linear Convolution');
+
+m=length(x);
+
+m1=length(h);
+
+subplot(2,2,2);
+
+stem(x);
+
+xlabel('n values');
+
+ylabel('Amplitude');
+
+title(' x(n) ');
+
+subplot(2,2,3);
+
+stem(h);
+
+xlabel('n values');
+
+ylabel('Amplitude');
+
+title(' h(n) ');
+
+X=[x,zeros(1,m)];
+
+H=[h,zeros(1,m1)];
+
+for i=1:(m1+m-1)
+
+y(i)=0;
+
+for j=1:m
+
+if(i-j+1)>0
+
+y(i)=y(i)+X(j)*H(i-j+1);
+
 end
-[r c]=size(z); k=r+c;
-t=2; y=[];
-cd=0;
- 
-while(t<=k) for i=1:r
-for j=1:c
-if(i+j==t) cd=cd+z(i,j);
-end end
-end t=t+1; y=[y cd]; cd=0; end disp(y);
-subplot(2,1,1) stem(xcorr(x,h)); title('Cross correlation') subplot(2,1,2);
-stem(y); title('Output-y')
+
+end
+
+end
+
+subplot(2,2,4);
+
+stem(y);
 
 ```
 
 ## Output:
 
-![Output](src/cross.png)
+![Output](src/linear.png)
 <br>
-**Fig 3.1** : Figure of Cross correlation
-<br>
+**Fig 1.1** : Linear Convolution of two signals
+
+
 
 
 ## Discussion:
