@@ -9,59 +9,44 @@
 ## Theory:
 
 <p style="text-align: justify">
-In digital signal processing, autocorrelation is the correlation of a signal with a delayed copy of itself as a function of delay [1]. It is a measure of similarity between a signal and its time-delayed version [2]. The analysis of autocorrelation is a mathematical tool for finding repeating patterns, such as the presence of a periodic signal obscured by noise, or identifying the missing fundamental frequency in a signal implied by its harmonic frequencies [1]. It is often used in signal processing for analyzing functions or series of values, such as time domain signals [1].
+Autocorrelation is a mathematical representation of the degree of similarity between a given time series and a lagged version of itself over successive time intervals. It's conceptually similar to the correlation between two different time series, but autocorrelation uses the same time series twice: once in its original form and once lagged one or more time periods.
 </p>
 <p style="text-align: justify">
-In signal processing, cross-correlation is a measure of similarity of two series as a function of the displacement of one relative to the other [3]. This is also known as a sliding dot product or sliding inner-product [3]. It is commonly used for searching a long signal for a shorter, known feature [3]. It has applications in pattern recognition, single particle analysis, electron tomography, averaging, cryptanalysis, and neurophysiology [3].
+Cross-correlation is a measurement that tracks the movements of two or more sets of time series data relative to one another. It is used to compare multiple time series and objectively determine how well they match up with each other and, in particular, at what point the best match occurs.
+Cross-correlation may also reveal any periodicities in the data.
+
 </p>
-
+<br>
+<b> Required Software : Matlab</b>
+<br>
+<b> Required Language : Matlab</b>
+<br>
 ## Code:
-
+<b> Cross correlation</b>
+  <br>
+  
 ```matlab
-% without built in functions
 
-x = [-1 2 1];
-N = length(x);
-
-autocorr_x = zeros(1, 2*N-1);
-for k = -N+1:N-1
-    for n = 1:N
-        if n+k >= 1 && n+k <= N
-            autocorr_x(k+N) = autocorr_x(k+N) + x(n) * x(n+k);
-        end
-    end
+clc; clear all;
+x=input('Enter the input signal'); h=fliplr(x);
+z=[];
+for i=1:length(x) g=h.*x(i);
+z=[z;g];
 end
-
-crosscorr_xx = zeros(1, 2*N-1);
-for k = -N+1:N-1
-    for n = 1:N
-        if n+k >= 1 && n+k <= N
-            crosscorr_xx(k+N) = crosscorr_xx(k+N) + x(n) * x(n+k);
-        end
-    end
+[r c]=size(z); k=r+c;
+t=2; y=[];
+cd=0; while(t<=k)
+for i=1:r
+for j=1:c
+if(i+j==t) cd=cd+z(i,j); end
 end
+end t=t+1;
+y=[y cd];
+ 
+cd=0; end disp(y);
+subplot(2,1,1) stem(xcorr(x)); title('Auto correlation') subplot(2,1,2);
+stem(y); title('Output-y')
 
-subplot(4,1,1)
-stem(autocorr_x)
-title('Autocorrelation without built in function')
-
-subplot(4,1,2)
-stem(crosscorr_xx)
-title('Cross-correlation without built in function')
-
-% With built in functions
-
-auto_corr1 = xcorr(x);
-
-cross_corr1 = xcorr(x,y);
-
-subplot(4,1,3)
-stem(auto_corr1)
-title('Autocorrelation with built in function')
-
-subplot(4,1,4)
-stem(cross_corr1)
-title('Cross-correlation with built in function')
 ```
 
 ## Output:
@@ -69,52 +54,29 @@ title('Cross-correlation with built in function')
 ![Output](src/auto.png)
 
 <br>
-
+<b> Cross correlation</b>
+  <br>
+  
 ```matlab
-% without built in functions
-
-x = [-1 2 1];
-N = length(x);
-
-autocorr_x = zeros(1, 2*N-1);
-for k = -N+1:N-1
-    for n = 1:N
-        if n+k >= 1 && n+k <= N
-            autocorr_x(k+N) = autocorr_x(k+N) + x(n) * x(n+k);
-        end
-    end
+clc;
+clear all;
+x=input('Enter the first input signal'); x1=input('Enter the second input signal'); h=fliplr(x1);
+z=[];
+for i=1:length(x) g=h.*x(i);
+z=[z;g];
 end
+[r c]=size(z); k=r+c;
+t=2; y=[];
+cd=0;
+ 
+while(t<=k) for i=1:r
+for j=1:c
+if(i+j==t) cd=cd+z(i,j);
+end end
+end t=t+1; y=[y cd]; cd=0; end disp(y);
+subplot(2,1,1) stem(xcorr(x,h)); title('Cross correlation') subplot(2,1,2);
+stem(y); title('Output-y')
 
-crosscorr_xx = zeros(1, 2*N-1);
-for k = -N+1:N-1
-    for n = 1:N
-        if n+k >= 1 && n+k <= N
-            crosscorr_xx(k+N) = crosscorr_xx(k+N) + x(n) * x(n+k);
-        end
-    end
-end
-
-subplot(4,1,1)
-stem(autocorr_x)
-title('Autocorrelation without built in function')
-
-subplot(4,1,2)
-stem(crosscorr_xx)
-title('Cross-correlation without built in function')
-
-% With built in functions
-
-auto_corr1 = xcorr(x);
-
-cross_corr1 = xcorr(x,y);
-
-subplot(4,1,3)
-stem(auto_corr1)
-title('Autocorrelation with built in function')
-
-subplot(4,1,4)
-stem(cross_corr1)
-title('Cross-correlation with built in function')
 ```
 
 ## Output:
