@@ -37,7 +37,7 @@ Step5: Increment the index n, shift the sequence x (n-m) to right by one sample 
 
 ## Code:
 <br>
-<b> Cross correlation</b>
+<b> Linear Convolution</b>
   <br>
   
 ```matlab
