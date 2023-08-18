@@ -55,7 +55,7 @@ ind = F-length(t)
 
 ## Output:
 
-![Output](src/Picture1.png)
+![Output](images/delay.png)
 
 ```
 ind=1000
