@@ -4,7 +4,7 @@
 
 ## Experiment Name :
 
-## Implementation of circular convolution, sum and subtract of two signals and draw two particular figures in MATLAB.
+## Implementation of circular convolution, summation and subtraction of two signals and drawing for two particular figures on MATLAB.
 
 ---
 
@@ -148,7 +148,26 @@ patch(coor1(:,1),coor1(:,2),'w');
 
 **Fig.:** Convolution of two signals without using conv function
 
-## Discussion :
+## Discussion:
 
-All the operations performed successfully and was verified with the theory.
+<p style="text-align: justify">
+The task wa about implimenting convolution of two descrete signals. First it was done using the build in function of convolution cconv(), and then it was implimented without any build in function i.e applying some mathmatical logics. 
+Some problems were noticed while working with the arrays. As in matlab all the array index starts with index 1 not zero or negative so all the index whose index started with 0 was incremented by one . And also the size of array was not matched with the iteration number that’s why a function zeros() has been used for padding which made the size of all arrays equal size i.e of the number of total iteration.And the sequence in which the value x(n) signal is mulplied with the value of h(n) was found out by taking the mod function.
+And in the second task the signals were plotted i.e constructed by finding some coordinates mathmatically and then plotted them on the two axis which resulted in those two figures.
+
+
+</p>
+
+## Conclusion:
+
+<p style="text-align: justify">
+
+All the desired outputs were attained from the above programs.
+</p>
+
+## References:
+
+
+[1]" Circular Convolution", sciencedirect, 2023. [Online]. Available: https://www.sciencedirect.com/topics/engineering/circular-convolutionAccessed:07-May- 2023].
+
 
