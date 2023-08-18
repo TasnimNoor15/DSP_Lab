@@ -2,7 +2,9 @@
 
 ## Submission Date : May 15, 2023
 
-## Experiment Name : Experimental study of Auto correlation and Cross correlation of signals using MATLAB.
+## Experiment Name : Finding and plotting the Auto Correlation and Cross Correlation of two discrete signals on Matlab.
+
+
 
 ---
 
@@ -86,19 +88,30 @@ stem(y); title('Output-y')
 <br>
 
 
-## Discussion and Conclusion:
+## Discussion:
 
 <p style="text-align: justify">
 
-Both of the with and without built in function code snippets were executed successfully and same results were obtained for each of the cases.
+The task was about implimenting auto correlation and cross correlation from input signals.And then checking these two by the build in function xcorr(x) and xcorr(x,h) respectively. And both the correlation were implimented by matrix method.
+In auto correlation as onle one input could be taken so the second signal was its delayed or reversed version. Then a 2D array matrix was formed by these two discrete signal values.Then the final result was taken out by summing the upper and lower triangular matrix operation.
+In cross correlation same process was applied. Just here in this case two discrete signals were taken as input instead of one and then taking the reverse of that.
+
+
+</p>
+
+## Conclusion:
+
+<p style="text-align: justify">
+
+All the desired outputs were attained from the above programs.
 
 </p>
 
 ## References:
+[1]	" Auto correlation", investopedia, 2023. [Online]. Available: https://www.investopedia.com/terms/c/crosscorrelation.asp#:~:text=Cross%2Dcorrelation%20is
+%20a%20measurement,point%20the%20best%20match%20occurs/ [Accessed:14-May- 2023].
 
-[1] “Autocorrelation,” Wikipedia. [Online]. Available: https://en.wikipedia.org/wiki/Autocorrelation. [Accessed: 11-May-2023].
+[2]	" Cross correlation", investopedia, 2023. [Online]. Available: https://www.investopedia.com/terms/a/autocorrelation.asp#:~:text=Autocorrelation%20is%20the
+%20correlation%20of,movements%20and%20predict%20future%20ones./ [Accessed:14-May- 2023].
 
-[2] “What is Correlation in Signals and Systems,” Online Tutorials Library. [Online]. Available: https://www.tutorialspoint.com/what-is-correlation-in-signals-and-systems. [Accessed: 11-May-2023].
-
-[3] “Cross-correlation,” Wikipedia. [Online]. Available: https://en.wikipedia.org/wiki/Cross-correlation. [Accessed: 11-May-2023].
 
