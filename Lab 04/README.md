@@ -2,25 +2,24 @@
 
 ## Submission Date : May 22, 2023
 
-## Experiment Name :
-
-## Finding the time delay between two signals from their auto correlation.
+## Experiment Name : Finding the time delay between two signals from their auto correlation.
 ---
 
 ## Theory:
 
 <p style="text-align: justify">
-Time delay analysis finds the delay (also called the “lag”) between two signals, that are shifted in time. It is the most important part of time-difference-of-arrival (TDOA) transmitter localization.For delay analysis, correlation in the time domain is widely used. The correlation function plots the similarity between two signals for all possible lags τ.
+Time delay analysis finds the delay (also called the “lag”) between two signals, that are shifted in time. It is the most important part of time-difference-of-arrival (TDOA) transmitter localization.For delay analysis, correlation in the time domain is widely used. The correlation function plots the similarity between two signals for all possible lags T.
+  
 ```
                                                N-1
-                                       Corr(τ)=∑S1(t) * S2(t+τ)
+                                       Corr(T)=∑S1(t) * S2(t+T)
                                                t=0
 ```
   
 The peak of the correlation function occurs at the lag with the best similarity between the two signals, i.e. the estimated delay. [2]
 
 ```
-                                       τestimated=arg max(Corr(τ))
+                                       T_estimated=arg max(Corr(τ))
 ```
 </p>
 <br>
