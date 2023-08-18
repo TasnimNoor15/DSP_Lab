@@ -80,7 +80,7 @@ title(' y- output ');
 
 ## Output:
 
-![](src/circular.png)
+![](src/circular.jpg)
 
 **Fig.** : Convolution of two signals using conv function
 
@@ -109,7 +109,7 @@ title('Subtraction');
 
 ## Output :
 
-![](src/summation.png)
+![](src/summation.jpg)
 
 **Fig.:** Convolution of two signals without using conv function
 
