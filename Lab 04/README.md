@@ -11,11 +11,17 @@
 
 <p style="text-align: justify">
 Time delay analysis finds the delay (also called the “lag”) between two signals, that are shifted in time. It is the most important part of time-difference-of-arrival (TDOA) transmitter localization.For delay analysis, correlation in the time domain is widely used. The correlation function plots the similarity between two signals for all possible lags τ.
-                                                               N-1
+```
+                                               N-1
                                        Corr(τ)=∑S1(t) * S2(t+τ)
-                                                               t=0
+                                               t=0
+```
+  
 The peak of the correlation function occurs at the lag with the best similarity between the two signals, i.e. the estimated delay. [2]
+
+```
                                        τestimated=arg max(Corr(τ))
+```
 </p>
 <br>
    Required Software:  <b> Matlab</b>
