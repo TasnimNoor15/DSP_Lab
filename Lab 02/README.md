@@ -11,104 +11,135 @@
 ## Theory :
 
 <p style="text-align: justify">
-A procedure known as circular convolution combines two finite-length sequences by looping one sequence around the other and then conducting a convolution. The reason it is named "circular" is because the beginning and conclusion of each sequence are linked together to form a circle. Digital signal processing frequently employs circular convolution, particularly when implementing digital filters. It has some advantages over linear convolution in terms of computational simplicity and performance, and it can be used to determine how a linear time-invariant system responds to a periodic input signal.
+Circular convolution is defined for periodic sequences, whereas convolution is defined for aperiodic sequences. The circular convolution of two N-point periodic sequences x(n) and y(n) is the N-point sequence a(m) = x(n)* y(n), defined by
+
+    ```
+                               N-1
+                a(m)=x(m)*y(m)=∑x(n)− y(m−n),m=0,1,2,…,N−1.
+                               n=0
+
+    ```
 </p>
 <p style="text-align: justify">
 The two sequences are first padded with zeros to make them the same length before performing circular convolution in the same manner as linear convolution. However, the result is taken modulo the length of the sequences, which wraps the result around to the beginning of the series, rather than discarding the bits of the result that are attributable to the zero-padding.
 </p>
-The equation for the circular convolution of the two sequences, x and y, is:
-
-**x[n] \* y[n] = sum (k=0 to N-1) x[(n-k) mod N] \* y[k]**
 
 <p style="text-align: justify">
-where n is an index that ranges from 0 to N-1, and mod is the modulo operator. The result of the circular convolution is a sequence of length N, just like the input sequences.
-</p>
+And another task was to plot the summation and subtraction of two discrete signals which were
+n1=[0,0,0,2,2,2,1,1,1,0,2];
+n2=[2,2,0,1,1,1,0,0,0,0,3];
+
+And last task was to plot two given signals on same figure on Matlab.
+
 
 ## Code :
 
-Between two signals:
-
-```matlab
+<b> Finding the circular convolution from a given two discrete signals: </b>
+ <br>
+ 
 clc;
-clear;
-close all;
-x=input('Enter the first array: ');
-l1=length(x);
-h=input('Enter the second array: ');
-l2=length(h);
-z=zeros(1,l1);
+clear all;
+x=[1,2,3,4];
+h=[1,1,1,1];
+m=length(x);
+m1=length(h);
+N=max(m,m1);
+z=cconv(x,h,N);
+subplot(2,2,1);
+stem(z);
+xlabel('n values');
+ylabel('Amplitude');
+title('Circcular Convolution');
 
-for i=1:l1
-    for j=1:l1
-        k=mod(i-j,l1)+1;
-        z(i)=z(i)+x(j)*h(k);
-    end
-end
+subplot(2,2,2);
+stem(x);
+xlabel('n values');
+ylabel('Amplitude');
+title(' x(n) ');
+subplot(2,2,3);
+stem(h);
+xlabel('n values');
+ylabel('Amplitude');
+title(' h(n) ');
 
-disp('Input Signals: ')
-disp(x);
-disp(h);
-disp('Circular Convolution: ');
-disp(z);
-```
+X=[x,zeros(1,m)];
+H=[h,zeros(1,m1)];
+y=zeros(1,N);
+for n=1:N
+    for m=1:N
+        j=mod(n-m,N);
+        j=j+1;
+            y(n)=y(n)+x(m)*h(j);
+        end
+   end
+subplot(2,2,4);
+stem(y);
+xlabel('n values');
+ylabel('Amplitude');
+title(' y- output ');
 
 ## Output:
 
-![](src/Picture1.png)
+![](src/circular.png)
 
 **Fig.** : Convolution of two signals using conv function
 
-For plotting two signals and showing their summation and subtraction:
+<b> For plotting two signals and showing their summation and subtraction: </b> 
+<br>
 
 ```matlab
-n1 = [0, 0, 0, 2, 2, 2, 1, 1, 1, 0, 2]
-subplot(4, 1, 1);
+close all;
+clear all;
+n1=[0,0,0,2,2,2,1,1,1,0,2];
+n2=[2,2,0,1,1,1,0,0,0,0,3];
+subplot(4,2,1);
 stem(n1);
-title('1st signal');
-xlabel('Index');
-ylabel('Value');
-
-n2 = [2, 2, 0, 1, 1, 1, 0, 0, 0, 0, 3]
-subplot(4, 1, 2);
+title('n1 Signal');
+subplot(4,2,2);
 stem(n2);
-title('2nd signal');
-xlabel('Index');
-ylabel('Value');
-
-n3=n1+n2;
-subplot(4, 1, 3);
-stem(n3);
+title('n2 Signal');
+subplot(4,2,3);
+stem(n1+n2);
 title('Summation');
-xlabel('Index');
-ylabel('Value');
-
-
-n4=n1-n2;
-subplot(4, 1, 4);
-stem(n4);
+subplot(4,2,4);
+stem(n1-n2);
 title('Subtraction');
-xlabel('Index');
-ylabel('Value');
+
 ```
 
 ## Output :
 
-![](src/.png)
+![](src/summation.png)
 
 **Fig.:** Convolution of two signals without using conv function
 
 Drawing the figure of given signals using array and plot:
 
 ```matlab
-x=[0 0 1 1 1 1 0 0];
-t=0:1:7;
-subplot(2,1,1);
-plot(t,x);
+clc;
+clear all;
+h=1;
+a=2;
+b=4;
+A=[0,0];
+B=[b,0];
+C=[0.5*(b-a)+a h];
+D=[0.5*(b-a) h];
+coor=[A;B;C;D];
+subplot(2,2,1);
+patch(coor(:,1),coor(:,2),'w');
+e=[0,0];
+f=[1,1];
+g=[2,1];
+h=[3,2];
+i=[4,2];
+j=[5,1];
+k=[6,1];
+l=[7,0];
+coor1=[e;f;g;h;i;j;k;l];
+subplot(2,2,2);
+patch(coor1(:,1),coor1(:,2),'w');
 
-y=[0 1 1 2 2 1 1 0];
-t=0:1:7;
-subplot(2,1,2);
-plot(t,y);
 ```
 
 ## Output:
