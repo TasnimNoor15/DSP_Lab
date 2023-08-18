@@ -88,6 +88,7 @@ stem(y); title('Output-y')
 ## Output:
 
 ![Output](src/cross.png)
+<br>
 **Fig 3.1** : Figure of Cross correlation
 <br>
 
