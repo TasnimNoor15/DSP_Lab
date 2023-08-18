@@ -85,7 +85,7 @@ title(' y- output ');
 
 ![](src/circular.jpg)
 
-**Fig 2.1** : Convolution of two signals
+**Fig 2.1** : Circular Convolution of two signals
 
 <b> For plotting two signals and showing their summation and subtraction: </b> 
 <br>
