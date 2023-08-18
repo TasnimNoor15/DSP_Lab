@@ -13,12 +13,12 @@
 <p style="text-align: justify">
 Circular convolution is defined for periodic sequences, whereas convolution is defined for aperiodic sequences. The circular convolution of two N-point periodic sequences x(n) and y(n) is the N-point sequence a(m) = x(n)* y(n), defined by
 
-    ```
+ ```
                                N-1
                 a(m)=x(m)*y(m)=∑x(n)− y(m−n),m=0,1,2,…,N−1.
                                n=0
 
-    ```
+ ```
 </p>
 <p style="text-align: justify">
 The two sequences are first padded with zeros to make them the same length before performing circular convolution in the same manner as linear convolution. However, the result is taken modulo the length of the sequences, which wraps the result around to the beginning of the series, rather than discarding the bits of the result that are attributable to the zero-padding.
@@ -109,7 +109,7 @@ title('Subtraction');
 
 ## Output :
 
-![](src/summation.jpg)
+![](src/summation.png)
 
 **Fig.:** Convolution of two signals without using conv function
 
