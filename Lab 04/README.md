@@ -71,7 +71,7 @@ delay
 ```
 
 Here
-mag = 31
+ Maximum magnitude = 31
 delay = 10
 
 
