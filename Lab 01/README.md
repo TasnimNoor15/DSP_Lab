@@ -4,9 +4,9 @@
 
 ## Experiment Name : Study of Linear convolution and implimentation by MATLAB code.
 
+<br>
 
-
-## Discussion:
+## Theory:
 
 <p style="text-align: justify">
 
