@@ -17,6 +17,13 @@ Time delay analysis finds the delay (also called the “lag”) between two sign
 The peak of the correlation function occurs at the lag with the best similarity between the two signals, i.e. the estimated delay. [2]
                                        τestimated=arg max(Corr(τ))
 </p>
+<br>
+   Required Software:  <b> Matlab</b>
+<br>
+Required Language:  Matlab
+<br>
+<br>
+
 
 ## Code:
 
