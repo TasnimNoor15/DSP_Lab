@@ -69,9 +69,11 @@ delay
 ![Output](images/delay.png)
 
 ```
+
 Here
 mag = 31
 delay = 10
+
 
 ```
 
