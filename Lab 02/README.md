@@ -37,6 +37,7 @@ And last task was to plot two given signals on same figure on Matlab.
 <b> Finding the circular convolution from a given two discrete signals: </b>
  <br>
  
+``` matlab
 clc;
 clear all;
 x=[1,2,3,4];
@@ -78,6 +79,8 @@ xlabel('n values');
 ylabel('Amplitude');
 title(' y- output ');
 
+``` 
+
 ## Output:
 
 ![](src/circular.jpg)
@@ -87,7 +90,7 @@ title(' y- output ');
 <b> For plotting two signals and showing their summation and subtraction: </b> 
 <br>
 
-```matlab
+``` matlab
 close all;
 clear all;
 n1=[0,0,0,2,2,2,1,1,1,0,2];
