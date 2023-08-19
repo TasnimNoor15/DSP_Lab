@@ -60,7 +60,6 @@ end
 
 delay
 
-
 ```
 
 ## Output:
@@ -68,11 +67,9 @@ delay
 ![Output](images/delay.png)
 
 ```
-
 Here
  Maximum magnitude = 31
- delay = 10
-
+ delay = 10 unit
 
 ```
 
