@@ -15,7 +15,6 @@ Time delay analysis finds the delay (also called the “lag”) between two sign
                                                N-1
                                        Corr(T)=∑S1(t) * S2(t+T)
                                                t=0
-
 ```
   
 The peak of the correlation function occurs at the lag with the best similarity between the two signals, i.e. the estimated delay. [2]
