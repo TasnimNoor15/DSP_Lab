@@ -40,7 +40,7 @@ for i=1:length(x) g=h.*x(i);
 z=[z;g];
 end
 [r c]=size(z);
- k=r+c;
+k=r+c;
 t=2;
 y=[];
 cd=0;
