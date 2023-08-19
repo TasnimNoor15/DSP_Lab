@@ -25,9 +25,9 @@ The peak of the correlation function occurs at the lag with the best similarity 
 ```
 </p>
 <br>
-   Required Software:  <b> Matlab</b>
+   Required Software:<b> Matlab</b>
 <br>
-Required Language: <b>  Matlab </b>
+Required Language: <b>   Matlab </b>
 <br>
 <br>
 
@@ -72,7 +72,7 @@ delay
 
 Here
  Maximum magnitude = 31
-delay = 10
+ delay = 10
 
 
 ```
